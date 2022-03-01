@@ -1,20 +1,35 @@
 package com.company;
 
 public class Snake extends Animal {
-    private int age;
+    private String subType; // python, dimondback
     private String diet;
-    //types of snakes "bull snake
-    //name of snake "charlie"
+    private int age;
+    //name of snake
 
+    public Snake (String animalType, String nameOfAnimal, String subType, int age, String diet) {
+        super(animalType, nameOfAnimal);
+        this.subType = subType;
+        this.age = age;
+        this.diet = diet;
+    }
+
+    public String getSubType() {
+        return subType;
+    }
     public int getAge() {
+
         return age;
     }
 
     public String getDiet() {
+
         return diet;
     }
+
+
+
     public void printDetails() {
         super.printDetails();
-        System.out.println("The Snakes are " + age + " and love to eat " + diet);
+        System.out.println("This Snake is a " + subType + ". It is " + age + " years old and love to eat " + diet);
     }
 }
