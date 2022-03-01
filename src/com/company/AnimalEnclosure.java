@@ -1,17 +1,24 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class AnimalEnclosure extends Building {
     //primate enclosure
     //reptile enclosure
     private int capacity;
-    private double feedingTime;
-    List<String> animalsInPrimateEnclosure = new ArrayList<>();
-    List<String> animalsInReptileEnclosure = new ArrayList<>();
+    private String feedingTime;
+    private Animal[] animalsInEnclosure;
 
-    public double getFeedingTime() {
+    //Animal Enclosure Constructor
+    public AnimalEnclosure (String locationOfBuilding, String nameOfBuilding, Animal[] animalsInEnclosure, int capacity, String feedingTime) {
+        super(locationOfBuilding, nameOfBuilding);
+        this.animalsInEnclosure = animalsInEnclosure;
+        this.capacity = capacity;
+        this.feedingTime = feedingTime;
+    }
+    public String getFeedingTime() {
         return feedingTime;
     }
 
@@ -19,13 +26,20 @@ public class AnimalEnclosure extends Building {
         return capacity;
     }
 
+    public Animal[] getAnimalsInEnclosure() {
+        return animalsInEnclosure;
+    }
+
+
+    //Animal Enclosure buildingDetails
     public void buildingDetails () {
         super.buildingDetails();
+        String allAnimals = "";
+        for(int i = 0; i <animalsInEnclosure.length; i++) {
+            allAnimals += animalsInEnclosure[i].getSubType() + ", " ;
+        }
         System.out.println("The " + getNameOfBuilding() + " is located on the " + getLocationOfBuilding() + "" +
-                "of the zoo. Which houses the " + animalsInPrimateEnclosure + " " +
-                "which has a capacity of " + capacity + " and has a Feeding time of: " + feedingTime);
-        System.out.println("The "  + getNameOfBuilding() + " is located on the " + getLocationOfBuilding() + "" +
-                "of the zoo. Which houses the " + animalsInReptileEnclosure + " " +
+                "of the zoo. Which houses the " + allAnimals + " " +
                 "which has a capacity of " + capacity + " and has a Feeding time of: " + feedingTime);
     }
 

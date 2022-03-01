@@ -1,21 +1,17 @@
 package com.company;
 
 public class Snake extends Animal {
-    private String subType; // python, dimondback
     private String diet;
     private int age;
     //name of snake
 
+    //Snake Constructor
     public Snake (String animalType, String nameOfAnimal, String subType, int age, String diet) {
-        super(animalType, nameOfAnimal);
-        this.subType = subType;
+        super(animalType, nameOfAnimal, subType);
         this.age = age;
         this.diet = diet;
     }
 
-    public String getSubType() {
-        return subType;
-    }
     public int getAge() {
 
         return age;
@@ -26,10 +22,9 @@ public class Snake extends Animal {
         return diet;
     }
 
-
-
+    //Snake printDetails
     public void printDetails() {
         super.printDetails();
-        System.out.println("This Snake is a " + subType + ". It is " + age + " years old and love to eat " + diet);
+        System.out.println("This Snake is a " + getSubType() + ". It is " + age + " years old and love to eat " + diet);
     }
 }

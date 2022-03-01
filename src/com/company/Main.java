@@ -12,28 +12,34 @@ public class Main {
 //    and find what enclosure they are in.
 
     public static void main(String[] args) {
-        List<String> animalsInPrimateEnclosure = new ArrayList<>();
-        animalsInPrimateEnclosure.add("Baboon");
-        animalsInPrimateEnclosure.add("Gorilla");
-        animalsInPrimateEnclosure.add("Orangutan");
+        //Add animals to Zoo
+        Monkey[] animalsInPrimateEnclosure = new Monkey[3];
 
-        List<String> animalsInReptileEnclosure = new ArrayList<>();
-        animalsInReptileEnclosure.add("Bull Python");
-        animalsInReptileEnclosure.add("Diamondback");
-        animalsInReptileEnclosure.add("Copperhead");
+        animalsInPrimateEnclosure[0] = new Monkey ("Mammal", "Monkey", "Baboon", 4, "Nuts, Fruits, and Grasses");
+        animalsInPrimateEnclosure[1] = new Monkey ("Mammal", "Monkey", "Gorilla", 2, "Bamboo shoots and Fruit");
+        animalsInPrimateEnclosure[2] = new Monkey ("Mammal", "Monkey", "Orangutan", 1, "Fruits, Leaves and Insects");
 
+        Snake[] animalsInReptileEnclosure = new Snake[3];
 
-        Monkey primate1 = new Monkey ("Mammal", "Monkey", "Baboon", 4, "Nuts, Fruits, and Grasses");
-        Monkey primate2 = new Monkey ("Mammal", "Monkey", "Gorilla", 2, "Bamboo shoots and Fruit");
-        Monkey primate3 = new Monkey ("Mammal", "Monkey", "Orangutan", 1, "Fruits, Leaves and Insects");
-        Snake reptile1 = new Snake ("Reptile", "Snake", "Bull Python", 2, "Mice");
-        Snake reptile2 = new Snake ("Reptile", "Snake", "Diamondback", 5, "Mice");
-        Snake reptile3 = new Snake ("Reptile", "Snake", "Copperhead", 1, "Mice");
+        animalsInReptileEnclosure[0] = new Snake ("Reptile", "Snake", "Bull Python", 2, "Mice");
+        animalsInReptileEnclosure[1] = new Snake ("Reptile", "Snake", "Diamondback", 5, "Mice");
+        animalsInReptileEnclosure[2] = new Snake ("Reptile", "Snake", "Copperhead", 1, "Mice");
 
+        //animal Enclosures -
+        AnimalEnclosure primateEnclosure = new AnimalEnclosure("South-side", "Primate Enclosure", animalsInPrimateEnclosure, 1000, "2:00 - 3:00 pm");
+        AnimalEnclosure reptileEnclosure = new AnimalEnclosure("East-side", "Reptile Enclosure", animalsInReptileEnclosure, 800, "9:00-10:00 am");
 
-//        monkey1.printDetails();
-//        snake1.printDetails();
+        primateEnclosure.buildingDetails();
+        reptileEnclosure.buildingDetails();
 
+        //GuestServices
+        List<String> allRestaurants = new ArrayList<>();
+        allRestaurants.add("King Panda");
+        allRestaurants.add("Pizza Palace");
+        allRestaurants.add("Steak Hut");
+
+        GuestServices guestServices = new GuestServices("front", "Guest Services", allRestaurants, "Bathroom", "Visitor Center");
+//      Start of Zoo
         Scanner myScanner = new Scanner(System.in);
 
         System.out.println("Please choose an option: Guest Services [1], Animal Enclosures [2], Search for an Animal [3] ");
@@ -55,10 +61,14 @@ public class Main {
         }
         if (userInput == 3) {
             System.out.println("Which animal would you like view info on?");
+            String userAnimalInput = myScanner.nextLine();
+//            for (userAnimalInput) {
+//                System.out.println() //use .contains to see if any of the lists contain the animal and if it is print info, if not get error message
+//            }
 
         }
-        throw new NAMEOFEXPRESSIONFOR INVALID INPUT ("Invalid response, please choose one of the following options: " +
-                "Guest Services [1], Animal Enclosures [2], Search for an Animal [3]")
+//        throw new NAMEOFEXPRESSIONFOR INVALID INPUT ("Invalid response, please choose one of the following options: " +
+//                "Guest Services [1], Animal Enclosures [2], Search for an Animal [3]")
 //        List<String> restaurant = new ArrayList<>();
 //        restaurant.add("King Panda");
 //
