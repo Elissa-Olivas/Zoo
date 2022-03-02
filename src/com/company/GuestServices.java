@@ -9,8 +9,13 @@ public class GuestServices extends Building {
     //possible other properties: gift shop
     List<String> restaurants = new ArrayList<>();
 
-    private String location2 = "bathrooms";
-    private String location3 = "visitor center";
+    private String location2 = "Gift Shop";
+    private String location3 = "Visitor Center";
+    boolean hasBathrooms;
+
+    public boolean getHasBathrooms() {
+        return hasBathrooms;
+    }
 
     public String getLocation2 () {
 
@@ -23,18 +28,19 @@ public class GuestServices extends Building {
     }
 
     //GuestServices Constructor:
-    public GuestServices (String locationOfBuilding, String nameOfBuilding, List<String> newRestaurants, String location2, String location3) {
+    public GuestServices (String locationOfBuilding, String nameOfBuilding, List<String> newRestaurants, String location2, String location3, boolean hasBathrooms) {
         super(locationOfBuilding, nameOfBuilding);
         restaurants.addAll(newRestaurants);
-        this.location2 = location2;
-        this.location3 = location3;
+        this.location2 = "Gift Shop";
+        this.location3 = "Visitor Center";
+        this.hasBathrooms = true;
     }
 
     //GuestServices buildingDetails
     public void buildingDetails () {
         super.buildingDetails();
-        System.out.println("The " + getNameOfBuilding() + " is located at the " + getLocationOfBuilding() + "" +
-                                "of the zoo. In " + getNameOfBuilding() + " There is " + restaurants + ", " +
-                location2 + " and " + location3);
+        System.out.println(getNameOfBuilding() + " is located at the " + getLocationOfBuilding() + "" +
+                                "of the zoo. In " + getNameOfBuilding() + " There are restaurants: " + restaurants + ", a " +
+                location2 + " and a " + location3 + ". \n There is also a bathroom right next to " + location2 + ": " + hasBathrooms + ".");
     }
 }

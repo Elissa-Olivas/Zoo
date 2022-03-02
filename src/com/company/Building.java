@@ -6,8 +6,8 @@ public class Building {
 
     //building Constructor
     public Building (String locationOfBuilding, String nameOfBuilding) {
-        this.locationOfBuilding = locationOfBuilding;
-        this.nameOfBuilding = nameOfBuilding;
+        this.locationOfBuilding = "Front";
+        this.nameOfBuilding = "Guest Services";
     }
     public String getLocationOfBuilding() {
 
@@ -21,6 +21,6 @@ public class Building {
 
     //Building printDetails
     public void buildingDetails () {
-        System.out.println("The " + nameOfBuilding + " is located at " + locationOfBuilding + " of the zoo.");
+        System.out.println(nameOfBuilding + " is located at " + locationOfBuilding + " of the zoo.");
     }
 }

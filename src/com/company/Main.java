@@ -46,7 +46,7 @@ public class Main {
         allRestaurants.add("Pizza Palace");
         allRestaurants.add("Steak Hut");
 
-        GuestServices guestServices = new GuestServices("front", "Guest Services", allRestaurants, "Bathroom", "Visitor Center");
+        GuestServices guestServices = new GuestServices("front", "Guest Services", allRestaurants, "Gift Shop", "Visitor Center", true);
 //      Start of Zoo
         Scanner myScanner = new Scanner(System.in);
         boolean exitMenu = true;
@@ -57,7 +57,7 @@ public class Main {
             int userInput = myScanner.nextInt();
             if (userInput == 1) {
                 System.out.println("Here are the different Services in the Guest Services Building: ");
-                System.out.println("PRINT GUEST SERVICE INFO");
+                guestServices.buildingDetails();
             }
             if (userInput == 2) {
                 System.out.println("For more information about each Enclosure: Primate Enclosure[1], Reptile Enclosure[2]");
