@@ -24,7 +24,6 @@ public class Snake extends Animal {
 
     //Snake printDetails
     public void printDetails() {
-        super.printDetails();
-        System.out.println("This Snake is a " + getSubType() + ". It is " + age + " years old and love to eat " + diet);
+        System.out.println("This Snake is a " + getSubType() + ". It is " + age + " years old and loves to eat " + diet);
     }
 }

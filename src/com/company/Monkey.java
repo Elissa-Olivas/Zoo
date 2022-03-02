@@ -24,8 +24,8 @@ public class Monkey extends Animal {
 
     //Monkey Print Details
     public void printDetails() {
-        super.printDetails();
-        System.out.println("This Monkey is a " + getSubType() + ". It is " + age + " years old and love to eat " + diet);
+//        super.printDetails();
+        System.out.println("This Monkey is a " + getSubType() + ". It is " + age + " years old and loves to eat " + diet);
 
     }
 }

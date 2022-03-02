@@ -33,7 +33,6 @@ public class AnimalEnclosure extends Building {
 
     //Animal Enclosure buildingDetails
     public void buildingDetails () {
-        super.buildingDetails();
         String allAnimals = "";
         for(int i = 0; i < animalsInEnclosure.length; i++) {
             allAnimals += animalsInEnclosure[i].getSubType() + ", " ;

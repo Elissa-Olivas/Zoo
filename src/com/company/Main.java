@@ -77,15 +77,14 @@ public class Main {
                 System.out.println("Which animal would you like view info on? There are Monkeys and Snakes");
                 String userAnimalInput = myScanner.next();
                 if (userAnimalInput.equals("Monkey") || userAnimalInput.equals("Monkys")) {
-                    for (int i = 0; i < animalsInPrimateEnclosure.length; i++) {
-                        System.out.println(animalsInPrimateEnclosure[i]);
-                    }
+                    animalsInPrimateEnclosure[0].printDetails();
+                    animalsInPrimateEnclosure[1].printDetails();
+                    animalsInPrimateEnclosure[2].printDetails();
                 }
                 if (userAnimalInput.equals("Snake") || userAnimalInput.equals("Snakes")) {
-                    for (Snake allSnakeDetails : animalsInReptileEnclosure) {
-                        System.out.print(allSnakeDetails);
-                    }
-//                    System.out.println(Arrays.toString(new Snake[]{allReptiles}));
+                    animalsInReptileEnclosure[0].printDetails();
+                    animalsInReptileEnclosure[1].printDetails();
+                    animalsInReptileEnclosure[2].printDetails();
                 }
             }
             if (userInput == 4) {
