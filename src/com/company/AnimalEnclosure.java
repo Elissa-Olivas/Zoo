@@ -39,8 +39,8 @@ public class AnimalEnclosure extends Building {
             allAnimals += animalsInEnclosure[i].getSubType() + ", " ;
         }
         System.out.println("The " + getNameOfBuilding() + " is located on the " + getLocationOfBuilding() + "" +
-                "of the zoo. Which houses the " + allAnimals + " " +
-                "which has a capacity of " + capacity + " and has a Feeding time of: " + feedingTime);
+                " of the zoo. Which houses the " + allAnimals + ". " +
+                "It has a capacity of " + capacity + " and Feeding time is between: " + feedingTime);
     }
 
 }

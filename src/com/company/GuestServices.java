@@ -6,6 +6,7 @@ import java.util.List;
 public class GuestServices extends Building {
     //represents - restaurants, bathrooms, visitor center, etc available to zoo guests.
     //should have several properties that a zoo guest service building might have, including a list of services offered
+    //possible other properties: gift shop
     List<String> restaurants = new ArrayList<>();
 
     private String location2 = "bathrooms";
