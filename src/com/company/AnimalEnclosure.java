@@ -35,12 +35,21 @@ public class AnimalEnclosure extends Building {
     public void buildingDetails () {
         super.buildingDetails();
         String allAnimals = "";
-        for(int i = 0; i <animalsInEnclosure.length; i++) {
+        for(int i = 0; i < animalsInEnclosure.length; i++) {
             allAnimals += animalsInEnclosure[i].getSubType() + ", " ;
         }
         System.out.println("The " + getNameOfBuilding() + " is located on the " + getLocationOfBuilding() + "" +
                 " of the zoo. Which houses the " + allAnimals + ". " +
                 "It has a capacity of " + capacity + " and Feeding time is between: " + feedingTime);
+    }
+
+
+    //get animal details
+    public void printAnimalDetails () {
+        String allAnimalDetails = "";
+        for (int a = 0; a < animalsInEnclosure.length; a++) {
+            allAnimalDetails += animalsInEnclosure[a] + ", ";
+        }
     }
 
 }

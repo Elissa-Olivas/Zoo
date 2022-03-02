@@ -40,7 +40,7 @@ public class GuestServices extends Building {
     public void buildingDetails () {
         super.buildingDetails();
         System.out.println(getNameOfBuilding() + " is located at the " + getLocationOfBuilding() + "" +
-                                "of the zoo. In " + getNameOfBuilding() + " There are restaurants: " + restaurants + ", a " +
+                                " of the zoo. In " + getNameOfBuilding() + " There are restaurants: " + restaurants + ", a " +
                 location2 + " and a " + location3 + ". \n There is also a bathroom right next to " + location2 + ": " + hasBathrooms + ".");
     }
 }

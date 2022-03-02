@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -13,6 +14,10 @@ public class Main {
 
     public static void main(String[] args) {
         //Add animals to Zoo
+//        List<Monkey> animalsInPrimateEnclosure = new ArrayList<Monkey>();
+//        animalsInPrimateEnclosure.add(new Monkey("Mammal", "Monkey", "Baboon", 4, "Nuts, Fruits, and Grasses"));
+//        animalsInPrimateEnclosure.add(new Monkey("Mammal", "Monkey", "Gorilla", 2, "Bamboo Shoots and Fruit"));
+//        animalsInPrimateEnclosure.add(new Monkey("Mammal", "Monkey", "Orangutan", 1, "Fruits, Leaves and Insects"));
         Monkey[] animalsInPrimateEnclosure = new Monkey[3];
 
         animalsInPrimateEnclosure[0] = new Monkey("Mammal", "Monkey", "Baboon", 4, "Nuts, Fruits, and Grasses");
@@ -29,24 +34,23 @@ public class Main {
         AnimalEnclosure primateEnclosure = new AnimalEnclosure("South-side", "Primate Enclosure", animalsInPrimateEnclosure, 1000, "2:00 - 3:00 pm");
         AnimalEnclosure reptileEnclosure = new AnimalEnclosure("East-side", "Reptile Enclosure", animalsInReptileEnclosure, 800, "9:00-10:00 am");
 
-        String allPrimates = " ";
-        for (int p = 0; p < animalsInPrimateEnclosure.length; p++) {
-            allPrimates += animalsInPrimateEnclosure[p];
-        }
 
-        String allReptiles = " ";
-        for (int r = 0; r < animalsInReptileEnclosure.length; r++) {
-            allReptiles += animalsInReptileEnclosure[r];
-        }
+
+//        String allReptiles = " ";
+//        for (int r = 0; r < animalsInReptileEnclosure.length; r++) {
+//            allReptiles += animalsInReptileEnclosure[r];
+//        }
 
 
         //GuestServices
         List<String> allRestaurants = new ArrayList<>();
-        allRestaurants.add("King Panda");
-        allRestaurants.add("Pizza Palace");
-        allRestaurants.add("Steak Hut");
+        allRestaurants.add("King Panda"); //chinese
+        allRestaurants.add("Purple Pig"); //bbq joint
+        allRestaurants.add("Frying Nemo"); //seafood
 
         GuestServices guestServices = new GuestServices("front", "Guest Services", allRestaurants, "Gift Shop", "Visitor Center", true);
+
+
 //      Start of Zoo
         Scanner myScanner = new Scanner(System.in);
         boolean exitMenu = true;
@@ -73,13 +77,19 @@ public class Main {
                 System.out.println("Which animal would you like view info on? There are Monkeys and Snakes");
                 String userAnimalInput = myScanner.next();
                 if (userAnimalInput.equals("Monkey") || userAnimalInput.equals("Monkys")) {
-                    System.out.println(allPrimates);//use .contains to see if any of the lists contain the animal and if it is print info, if not get error message
+                    for (int i = 0; i < animalsInPrimateEnclosure.length; i++) {
+                        System.out.println(animalsInPrimateEnclosure[i]);
+                    }
                 }
                 if (userAnimalInput.equals("Snake") || userAnimalInput.equals("Snakes")) {
-                    System.out.println(allReptiles);
+                    for (Snake allSnakeDetails : animalsInReptileEnclosure) {
+                        System.out.print(allSnakeDetails);
+                    }
+//                    System.out.println(Arrays.toString(new Snake[]{allReptiles}));
                 }
             }
             if (userInput == 4) {
+                System.out.println("Thank you for Visiting the Zoo. Come back soon!");
                 break;
             }
 

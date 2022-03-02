@@ -6,8 +6,8 @@ public class Building {
 
     //building Constructor
     public Building (String locationOfBuilding, String nameOfBuilding) {
-        this.locationOfBuilding = "Front";
-        this.nameOfBuilding = "Guest Services";
+        this.locationOfBuilding = locationOfBuilding;
+        this.nameOfBuilding = nameOfBuilding;
     }
     public String getLocationOfBuilding() {
 
