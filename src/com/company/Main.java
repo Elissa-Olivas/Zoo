@@ -36,12 +36,6 @@ public class Main {
 
 
 
-//        String allReptiles = " ";
-//        for (int r = 0; r < animalsInReptileEnclosure.length; r++) {
-//            allReptiles += animalsInReptileEnclosure[r];
-//        }
-
-
         //GuestServices
         List<String> allRestaurants = new ArrayList<>();
         allRestaurants.add("King Panda"); //chinese
@@ -85,6 +79,8 @@ public class Main {
                     animalsInReptileEnclosure[0].printDetails();
                     animalsInReptileEnclosure[1].printDetails();
                     animalsInReptileEnclosure[2].printDetails();
+                } else {
+                    System.out.println("Sorry that animal is not located at the zoo");
                 }
             }
             if (userInput == 4) {
